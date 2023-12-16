@@ -15,6 +15,9 @@ interface Props {
 
 export const Person: FC<Props> = ({ name, age, email, hairColor }) => {
   const [country, setCountry] = useState<string | null>("");
+    type NameType = "Kamal" | "Salman" | "Manuel";
+  const nameForType: NameType = "Manuel"
+  console.log(nameForType)
   const handleChange = (event: ChangeEvent<HTMLInputElement>) =>{
         setCountry(event.target.value)
   }
